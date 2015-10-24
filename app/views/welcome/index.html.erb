@@ -1,3 +1,7 @@
 <div>
-  Hi
+  Hi <%= current_user ? current_user.email : "" %>
+</div>
+<div>
+  <%= link_to "Sign in with Linked In", user_omniauth_authorize_path(:linkedin) %> 
+  <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "text-danger") %>
 </div>

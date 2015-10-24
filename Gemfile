@@ -9,9 +9,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'awesome_print'
 
 gem 'devise', '~> 3.5.1'
-gem 'omniauth'
 gem "omniauth-google-oauth2"
+gem 'omniauth-linkedin'
 
+gem 'certified'
 
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -24,8 +25,10 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'annotate'
 end
 
+group :test do
+  gem 'shoulda-matchers', '~> 3.0'
+end
