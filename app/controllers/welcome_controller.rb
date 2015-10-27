@@ -1,11 +1,13 @@
 class WelcomeController < ApplicationController
   skip_before_action :authenticate_user!
 
-  def index
-    current_user
+  def home
   end
 
-  def show
+  def about
   end
-  
+
+  def contact
+  end
+
 end

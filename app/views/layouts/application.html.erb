@@ -6,8 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
+<body>
+  <ul class = "nav-bar">
+    <li><%= link_to "Home", home_path%> </li>
+    <li><%= link_to "About", about_path%> </li>
+    <li><%= link_to "Contact", contact_path%> </li>
+    <% if current_user %> 
+      <li class = "float-right"> <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "text-danger") %> </li>
+    <% else %>
+      <li class = "float-right"><%= link_to "Sign in with Linked In", user_omniauth_authorize_path(:linkedin) %></li>
+      <%end %>
+  </ul>
 <%= yield %>
 
 </body>

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     :controllers => { :omniauth_callbacks => "omniauth_callbacks" } 
 
 
-  root 'welcome#index'
+  root 'welcome#home', as: :home
 
   get 'welcome', to: 'welcome#show'
+  get 'about', to: 'welcome#about', as: :about
+  get 'contact', to: 'welcome#contact', as: :contact
 end
