@@ -14,18 +14,12 @@
  *= require_self
  */
 
-.nav-bar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  float: left;
-  width: 100%;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-.float-right {
-  float: right;
-}
-
-li {
-  display: inline; 
+.navbar-brand img { 
+  max-height: 20px;
+  max-width: 100%;
+  padding-top: 0;
+  padding-bottom: 0; 
 }
