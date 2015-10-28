@@ -10,7 +10,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     def linkedin
       puts "linkedin callback"
-      @user = User.from_omniauth(request.env["omniauth.auth"])
+      @user = User.from_linkedin_omniauth(request.env["omniauth.auth"])
       puts "="*10 + "yay" + "="*10
       sign_in_and_redirect @user
     end
